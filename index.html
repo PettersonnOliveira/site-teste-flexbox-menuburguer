@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Menu Flexbox</title>
+</head>
+<body>
+    <header>
+<h1>Meu Site</h1>
+<nav>
+<i class="material-icons" id="burguer">menu</i>
+    
+       <ul id="menu">
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+                <li><a href="#">Opção 6</a></li>
+            </ul> 
+    </nav>
+        
+            
+    </header>
+ <main>
+<h2>Teste de Flexbox</h2>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem id, vel soluta explicabo accusamus inventore sit qui temporibus ducimus sunt sint eligendi voluptatibus! Beatae ut necessitatibus, cumque laboriosam maiores inventore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet ipsum dolore repellat temporibus vitae labore optio minima veniam rem quisquam dolorum sapiente recusandae fuga voluptatum excepturi vero, fugit beatae?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, placeat. Voluptates illo, neque exercitationem cumque debitis obcaecati est beatae velit consequatur amet repudiandae quasi. Obcaecati modi laudantium possimus tempore eos?</p>
+ </main>   
+ <script>
+    let burguer = document.getElementById('burguer');
+    let menu = document.getElementById('menu');
+
+    burguer.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+ </script>
+</body>
+</html>

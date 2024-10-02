@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background: linear-gradient(to right, #3C3B3F, #605C3C);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+/* Menu em tela grande */
+nav ul {
+    list-style: none;
+    display: flex; /* Itens ficam em linha */
+}
+
+ul > li > a {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s;
+}
+
+/* Ícone de hambúrguer oculto em telas grandes */
+#burguer {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+main{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.372);
+}
+
+/* Estilo para o menu quando a tela é pequena */
+@media screen and (max-width: 768px) {
+   /* Centraliza todos os elementos dentro do header */
+   header {
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Centraliza o ícone do menu hambúrguer */
+#burguer {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Esconder o menu em telas pequenas até o ícone ser clicado */
+nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Centraliza o menu em telas pequenas */
+    background-color: gray;
+    padding: 10px;
+    width: 100%;
+}
+
+nav ul.active {
+    display: flex; /* Exibir o menu quando o ícone for clicado */
+}
+
+ul > li {
+    width: 100%;
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove as margens dos itens da lista */
+}
+
+ul > li > a {
+    display: block; /* Garante que o link ocupe toda a linha */
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    color: inherit; /* Herda a cor do texto do pai */
+    width: 90vw;
+    padding: 15px; /* Ajuste o padding conforme necessário */
+    box-sizing: border-box; /* Inclui padding e border na largura total *
+}
+
+/* Mostrar o ícone de hambúrguer em telas pequenas */
+#burguer {
+    display: block;
+}
+}
